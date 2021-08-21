@@ -1,0 +1,50 @@
+{
+  "Serilog": {
+    "MinimumLevel": {
+      "Default": "Debug",
+      "Override": {
+        "Microsoft": "Fatal",
+        "System": "Fatal"
+      }
+    },
+    "WriteTo": [
+      {
+        "Name": "Async",
+        "Args": {
+          "configure": [
+            {
+              "Name": "File",
+              "Args": {
+                "path": "C:\\Logs\\MovieHallAPILog.log",
+                "fileSizeLimitBytes": "100000",
+                "rollingInterval": "Day",
+                "restrictedToMinimumLevel" : "Information"
+              }
+            },
+            {
+              "Name": "File",
+              "Args": {
+                "path": "C:\\Logs\\MovieHallAPITrace.log",
+                "fileSizeLimitBytes": "100000",
+                "rollingInterval": "Day",
+                "restrictedToMinimumLevel": "Debug"
+              }
+            },
+            {
+              "Name": "File",
+              "Args": {
+                "path": "C:\\Logs\\MovieHallAPIError.log",
+                "fileSizeLimitBytes": "100000",
+                "rollingInterval": "Day",
+                "restrictedToMinimumLevel": "Error"
+              }
+            }
+          ]
+        }
+
+      }
+    ]
+
+  }
+
+}

@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using MovieHallAPI.Abstraction;
 using MovieHallAPI.Core;
 using MovieHallAPI.Repository;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,9 +19,11 @@ namespace MovieHallAPI
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        ILoggerFactory _loggerfactory;
+        public Startup(IConfiguration configuration,ILoggerFactory loggerFactory)
         {
             Configuration = configuration;
+            _loggerfactory = loggerFactory;
         }
 
         public IConfiguration Configuration { get; }
@@ -30,7 +33,9 @@ namespace MovieHallAPI
         {
             services.AddControllers();
             services.AddTransient<IMovieHallProcessor, MovieHallProcess>()
-                    .AddTransient<IMovieHallRepository, MovieHallRepository>();
+                    .AddTransient<IMovieHallRepository, MovieHallRepository>()
+                    .AddSingleton((Serilog.ILogger)new LoggerConfiguration().CreateLogger())
+                    ;
             
             services.AddMvc(config =>
             {
@@ -39,8 +44,9 @@ namespace MovieHallAPI
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
+            loggerFactory.AddSerilog();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

@@ -1,0 +1,87 @@
+2021-08-21 17:53:58.267 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-21 17:53:59.680 +05:30 [INF] Now listening on: https://localhost:5001
+2021-08-21 17:53:59.693 +05:30 [INF] Now listening on: http://localhost:5000
+2021-08-21 17:53:59.710 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-21 17:53:59.716 +05:30 [INF] Hosting environment: Development
+2021-08-21 17:53:59.735 +05:30 [INF] Content root path: C:\VisusalStudioProjects\MovieHallAPI\MovieHallAPI\Src\MovieHallAPI
+2021-08-21 17:54:01.406 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5001/Movies  
+2021-08-21 17:54:01.530 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+MovieHallAPI.Controllers.V1.MoviesController.Index (MovieHallAPI)
+MovieHallAPI.Controllers.V1.MoviesController.FindMovie (MovieHallAPI)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-08-21 17:54:01.762 +05:30 [INF] Request finished in 361.3191ms 500 text/html; charset=utf-8
+2021-08-21 17:55:33.685 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-21 17:55:34.271 +05:30 [INF] Now listening on: https://localhost:5001
+2021-08-21 17:55:34.280 +05:30 [INF] Now listening on: http://localhost:5000
+2021-08-21 17:55:34.284 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-21 17:55:34.287 +05:30 [INF] Hosting environment: Development
+2021-08-21 17:55:34.294 +05:30 [INF] Content root path: C:\VisusalStudioProjects\MovieHallAPI\MovieHallAPI\Src\MovieHallAPI
+2021-08-21 17:55:35.387 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5001/Movies  
+2021-08-21 17:55:35.459 +05:30 [INF] Request finished in 76.8531ms 404 
+2021-08-21 17:55:53.520 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-21 17:55:54.620 +05:30 [INF] Now listening on: https://localhost:5001
+2021-08-21 17:55:54.626 +05:30 [INF] Now listening on: http://localhost:5000
+2021-08-21 17:55:54.630 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-21 17:55:54.634 +05:30 [INF] Hosting environment: Development
+2021-08-21 17:55:54.637 +05:30 [INF] Content root path: C:\VisusalStudioProjects\MovieHallAPI\MovieHallAPI\Src\MovieHallAPI
+2021-08-21 17:55:55.923 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5001/Movies  
+2021-08-21 17:55:56.003 +05:30 [INF] Request finished in 90.1794ms 404 
+2021-08-21 17:56:01.456 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5001/Movies/Index  
+2021-08-21 17:56:01.482 +05:30 [INF] Request finished in 26.2494ms 404 
+2021-08-21 17:56:15.067 +05:30 [INF] Application is shutting down...
+2021-08-21 17:56:29.180 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-21 17:56:29.912 +05:30 [INF] Now listening on: https://localhost:5001
+2021-08-21 17:56:29.915 +05:30 [INF] Now listening on: http://localhost:5000
+2021-08-21 17:56:29.919 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-21 17:56:29.924 +05:30 [INF] Hosting environment: Development
+2021-08-21 17:56:29.928 +05:30 [INF] Content root path: C:\VisusalStudioProjects\MovieHallAPI\MovieHallAPI\Src\MovieHallAPI
+2021-08-21 17:56:31.530 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5001/Movies  
+2021-08-21 17:56:31.604 +05:30 [INF] Executing endpoint 'MovieHallAPI.Controllers.V1.MoviesController.Index (MovieHallAPI)'
+2021-08-21 17:56:31.752 +05:30 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MovieHallAPI.Controllers.V1.MoviesController (MovieHallAPI).
+2021-08-21 17:57:21.577 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-21 17:57:22.900 +05:30 [INF] Now listening on: https://localhost:5001
+2021-08-21 17:57:22.903 +05:30 [INF] Now listening on: http://localhost:5000
+2021-08-21 17:57:22.908 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-21 17:57:22.911 +05:30 [INF] Hosting environment: Development
+2021-08-21 17:57:22.914 +05:30 [INF] Content root path: C:\VisusalStudioProjects\MovieHallAPI\MovieHallAPI\Src\MovieHallAPI
+2021-08-21 17:57:24.291 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5001/Movies  
+2021-08-21 17:57:24.344 +05:30 [INF] Executing endpoint 'MovieHallAPI.Controllers.V1.MoviesController.Index (MovieHallAPI)'
+2021-08-21 17:57:24.474 +05:30 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MovieHallAPI.Controllers.V1.MoviesController (MovieHallAPI).
+2021-08-21 17:57:24.771 +05:30 [INF] AddMovies in MovieHallProcess
+2021-08-21 17:57:24.782 +05:30 [INF] Executing ObjectResult, writing value of type 'MovieHallAPI.Contracts.MovieHallAPIResponse'.
+2021-08-21 17:57:24.817 +05:30 [INF] Executed action MovieHallAPI.Controllers.V1.MoviesController.Index (MovieHallAPI) in 325.0097ms
+2021-08-21 17:57:24.832 +05:30 [INF] Executed endpoint 'MovieHallAPI.Controllers.V1.MoviesController.Index (MovieHallAPI)'
+2021-08-21 17:57:24.852 +05:30 [INF] Request finished in 566.2945ms 200 application/json; charset=utf-8
+2021-08-21 17:57:32.698 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5001/Movies/Index  
+2021-08-21 17:57:32.705 +05:30 [INF] Request finished in 7.3075ms 404 
+2021-08-21 17:57:36.933 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5001/Movies  
+2021-08-21 17:57:36.947 +05:30 [INF] Executing endpoint 'MovieHallAPI.Controllers.V1.MoviesController.Index (MovieHallAPI)'
+2021-08-21 17:57:36.953 +05:30 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MovieHallAPI.Controllers.V1.MoviesController (MovieHallAPI).
+2021-08-21 17:57:36.968 +05:30 [INF] AddMovies in MovieHallProcess
+2021-08-21 17:57:36.980 +05:30 [INF] Executing ObjectResult, writing value of type 'MovieHallAPI.Contracts.MovieHallAPIResponse'.
+2021-08-21 17:57:36.991 +05:30 [INF] Executed action MovieHallAPI.Controllers.V1.MoviesController.Index (MovieHallAPI) in 25.5295ms
+2021-08-21 17:57:37.001 +05:30 [INF] Executed endpoint 'MovieHallAPI.Controllers.V1.MoviesController.Index (MovieHallAPI)'
+2021-08-21 17:57:37.014 +05:30 [INF] Request finished in 80.7747ms 200 application/json; charset=utf-8
+2021-08-21 17:58:07.464 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-21 17:58:08.047 +05:30 [INF] Now listening on: https://localhost:5001
+2021-08-21 17:58:08.050 +05:30 [INF] Now listening on: http://localhost:5000
+2021-08-21 17:58:08.053 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-21 17:58:08.058 +05:30 [INF] Hosting environment: Development
+2021-08-21 17:58:08.061 +05:30 [INF] Content root path: C:\VisusalStudioProjects\MovieHallAPI\MovieHallAPI\Src\MovieHallAPI
+2021-08-21 17:58:09.275 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5001/Movies  
+2021-08-21 17:58:09.360 +05:30 [INF] Executing endpoint 'MovieHallAPI.Controllers.V1.MoviesController.Index (MovieHallAPI)'
+2021-08-21 17:58:09.488 +05:30 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MovieHallAPI.Controllers.V1.MoviesController (MovieHallAPI).
+2021-08-21 17:58:25.938 +05:30 [INF] AddMovies in MovieHallProcess
+2021-08-21 17:58:49.429 +05:30 [INF] Executing ObjectResult, writing value of type 'MovieHallAPI.Contracts.MovieHallAPIResponse'.
+2021-08-21 17:58:49.491 +05:30 [INF] Executed action MovieHallAPI.Controllers.V1.MoviesController.Index (MovieHallAPI) in 39973.9334ms
+2021-08-21 17:58:49.504 +05:30 [INF] Executed endpoint 'MovieHallAPI.Controllers.V1.MoviesController.Index (MovieHallAPI)'
+2021-08-21 17:58:49.529 +05:30 [INF] Request finished in 40260.9139ms 200 application/json; charset=utf-8

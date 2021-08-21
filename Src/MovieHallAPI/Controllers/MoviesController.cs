@@ -22,21 +22,14 @@ namespace MovieHallAPI.Controllers.V1
             _movieHallProcessor = processor;
         }
 
-        [HttpGet]
+
         public IActionResult Index()
         {
-            return StatusCode(200, "test");
-        }
-
-        [HttpPost]
-        public IActionResult GetAllmovies()
-        {
-           
             MovieHallAPIResponse response = _movieHallProcessor.GetAllMovies();
             return StatusCode(200,response);
         }
 
-        [HttpGet]
+        [HttpGet("FindMovie", Name = "Find Movie")]
         public IActionResult FindMovie(string name)
         {
             Movie response = _movieHallProcessor.FindMovieByName(name);

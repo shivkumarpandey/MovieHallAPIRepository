@@ -5,9 +5,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Serilog" Version="2.10.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="3.0.1" />
+    <PackageReference Include="Serilog.Formatting.Compact" Version="1.1.0" />
+    <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MovieHallAPI.Abstraction\MovieHallAPI.Abstraction.csproj" />
     <ProjectReference Include="..\MovieHallAPI.Core\MovieHallAPI.Core.csproj" />
     <ProjectReference Include="..\MovieHallAPI.Repository\MovieHallAPI.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="movies.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Serilog.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 
