@@ -5,7 +5,7 @@ namespace MovieHallAPI.Abstraction
     public interface IMovieHallRepository
     {
 
-        MovieHallAPIResponse FindMovieByName(MovieHallAPIRequest request);
+        Movie FindMovieByName(MovieHallAPIRequest request);
         MovieHallAPIResponse GetAllMoviesFromAPI();
 
     }

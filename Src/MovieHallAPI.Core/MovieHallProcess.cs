@@ -8,7 +8,7 @@ namespace MovieHallAPI.Core
 {
     public class MovieHallProcess : IMovieHallProcessor
     {
-        ILogger<MovieHallProcess> _logger;
+        ILogger _logger;
         IMovieHallRepository movieHallRepository;
         public MovieHallProcess(IMovieHallRepository repository , ILogger<MovieHallProcess> logger)
         {
@@ -18,10 +18,9 @@ namespace MovieHallAPI.Core
 
         public Movie FindMovieByName(MovieHallAPIRequest request)
         {
-            MovieHallAPIResponse response = movieHallRepository.GetAllMoviesFromAPI();
-            Movie movie = response.ListOfMovies.Where(x => x.Title.Equals(request.movie)).FirstOrDefault();
+            Movie response = movieHallRepository.FindMovieByName(request);
 
-            return movie;
+            return response;
         }
 
         public MovieHallAPIResponse GetAllMovies()

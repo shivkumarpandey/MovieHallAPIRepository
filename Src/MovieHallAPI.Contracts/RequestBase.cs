@@ -6,7 +6,7 @@ namespace MovieHallAPI.Contracts
 {
    public class RequestBase
     {
-        string MessageId { get; set; }
-        DateTime RequestDateTime { get; set; }
+        public string MessageId { get; set; }
+        public DateTime RequestDateTime { get; set; }
     }
 }
