@@ -46,7 +46,7 @@ namespace MovieHallAPI.Core.Test
                 response.ListOfMovies = JsonConvert.DeserializeObject<List<Movie>>(json);
             }
             Movie movie = response.ListOfMovies.Where(x => x.Title.Equals(title)).SingleOrDefault();
-            Setup(x => x.FindMovieByName(It.IsAny<MovieHallAPIRequest>())).Returns(movie);
+            Setup(x => x.FindMovieByName(It.IsAny<string>())).Returns(movie);
             return this;
         }
     }

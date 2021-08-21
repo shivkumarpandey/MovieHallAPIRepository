@@ -30,6 +30,11 @@ namespace MovieHallAPI.Core.Test
         [Fact]
         public void GetAllMovies()
         {
+            MovieHallAPIRequest request = new MovieHallAPIRequest()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                RequestDateTime = DateTime.Now
+            };
             MovieHallFakeRepository movieHallFakeRepository = new MovieHallFakeRepository().GetAllMoviesMockResponse();
             IMovieHallRepository movieHallRepository = movieHallFakeRepository.Object;
             _serviceCollection.AddTransient(_ => movieHallRepository);
@@ -46,18 +51,9 @@ namespace MovieHallAPI.Core.Test
             IMovieHallRepository movieHallRepository = movieHallFakeRepository.Object;
             _serviceCollection.AddTransient(_ => movieHallRepository);
             _movieHallProcessor = serviceProvider.GetRequiredService<IMovieHallProcessor>();
-            MovieHallAPIRequest request = new MovieHallAPIRequest()
-            {
-                movie = new Movie()
-                {
-                    Title = "Harry Potter and the Chamber of Secrets",
-                    ImdbID = "tt0295297"
-                },
-                MessageId = new Guid().ToString(),
-                RequestDateTime = DateTime.Now
-            };
-            var response = _movieHallProcessor.FindMovieByName(request);
-            Assert.Equal(response.ImdbID, request.movie.ImdbID);
+   
+            var response = _movieHallProcessor.FindMovieByName("Harry Potter and the Chamber of Secrets");
+            Assert.Equal(response.ImdbID, "tt0295297");
         }
 
     }

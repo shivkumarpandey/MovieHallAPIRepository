@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\MovieHallAPI.Abstraction\MovieHallAPI.Abstraction.csproj" />
+    <ProjectReference Include="..\MovieHallAPI.Core\MovieHallAPI.Core.csproj" />
+    <ProjectReference Include="..\MovieHallAPI.Repository\MovieHallAPI.Repository.csproj" />
   </ItemGroup>
 
 

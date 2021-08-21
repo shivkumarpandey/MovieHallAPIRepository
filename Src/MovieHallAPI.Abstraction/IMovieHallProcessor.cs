@@ -6,6 +6,6 @@ namespace MovieHallAPI.Abstraction
     {
          MovieHallAPIResponse GetAllMovies();
 
-         Movie FindMovieByName(MovieHallAPIRequest request);
+         Movie FindMovieByName(string name);
     }
 }

@@ -6,6 +6,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using MovieHallAPI.Abstraction;
+using MovieHallAPI.Core;
+using MovieHallAPI.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +29,13 @@ namespace MovieHallAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddTransient<IMovieHallProcessor, MovieHallProcess>()
+                    .AddTransient<IMovieHallRepository, MovieHallRepository>();
+            
+            services.AddMvc(config =>
+            {
+                config.EnableEndpointRouting = false;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -16,9 +16,9 @@ namespace MovieHallAPI.Core
             movieHallRepository = repository;
         }
 
-        public Movie FindMovieByName(MovieHallAPIRequest request)
+        public Movie FindMovieByName(string name)
         {
-            Movie response = movieHallRepository.FindMovieByName(request);
+            Movie response = movieHallRepository.FindMovieByName(name);
 
             return response;
         }

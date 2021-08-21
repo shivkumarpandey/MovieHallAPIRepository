@@ -17,13 +17,13 @@ namespace MovieHallAPI.Repository
             _logger = logger;
         }
 
-        public Movie FindMovieByName(MovieHallAPIRequest request)
+        public Movie FindMovieByName(string name)
         {
             MovieHallAPIResponse aPIResponse = new MovieHallAPIResponse()
             {
                 ListOfMovies = LoadJson()
             };
-           Movie movie = aPIResponse.ListOfMovies.Where(x => x.Title.Equals(request.movie.Title)).SingleOrDefault();
+           Movie movie = aPIResponse.ListOfMovies.Where(x => x.Title.Equals(name)).SingleOrDefault();
 
             return movie;
         }
